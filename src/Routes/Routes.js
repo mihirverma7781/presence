@@ -1,13 +1,12 @@
 import React from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
-import Home from "../pages/Home";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ProtectedRoutes from "./ProtectedRoutes";
-
+import Home from "../pages/Home/Home"
 const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <ProtectedRoutes exact path="/" component={Home} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </BrowserRouter>
   );
