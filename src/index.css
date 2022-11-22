@@ -10,7 +10,13 @@
   --secondary: #02073e;
   --background: #f6f8fb;
   --muted-text: #566272;
-  --shadow: #3062901e;
+  --shadow: #30629010;
+  --d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: #dd006b6d;
+	--c2: #30629010;
 }
 
 * {
@@ -19,6 +25,7 @@
   margin: 0px;
   /* font-family: 'Red Hat Display', sans-serif; */
   font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* MARGIN */
