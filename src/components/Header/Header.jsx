@@ -4,6 +4,7 @@ import { BiCaretDown } from "react-icons/bi";
 import { IoIosOptions, IoIosClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import "./header.css";
+import { Link, useHistory } from "react-router-dom";
 
 const variants = {
   open: { opacity: 0, x: "0%" },
@@ -13,6 +14,8 @@ const variants = {
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [small, setSmall] = useState(false);
+
+  const History = useHistory();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -26,7 +29,7 @@ const Header = () => {
     <nav className={`header  ${small ? "white" : ""}`}>
       <div className="wrapper-container head-wrap">
         <div className="nav">
-          <div className="header-logo">
+          <div className="header-logo cursor-pointer select-none" onClick={()=>History.push("/")}>
             <span className="header-icon">
               <img src={Presence} alt="presence" />
             </span>{" "}
@@ -51,8 +54,8 @@ const Header = () => {
             </ul>
           </div>
           <div className="header-btn">
-            <button className="border-btn mar-10">Login</button>
-            <button className="primary-btn">Signup</button>
+            <button className="border-btn mar-10" onClick={()=>History.push("/login")}>Login</button>
+            <button className="primary-btn" onClick={()=>History.push("/signup")}>Signup</button>
           </div>
           <div onClick={() => setToggle(!toggle)} className="ham">
             <span className="ham-circle">

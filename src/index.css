@@ -12,11 +12,12 @@
   --muted-text: #566272;
   --shadow: #30629010;
   --d: 2500ms;
-	--angle: 90deg;
-	--gradX: 100%;
-	--gradY: 50%;
-	--c1: #dd006b6d;
-	--c2: #30629010;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: #dd006b6d;
+  --c2: #30629010;
+  --bs: #020718;
 }
 
 * {
@@ -40,6 +41,6 @@
 
 @media only screen and (max-width: 850px) {
   .wrapper-container {
-      margin: 0 2rem !important;
+    margin: 0 2rem !important;
   }
 }
